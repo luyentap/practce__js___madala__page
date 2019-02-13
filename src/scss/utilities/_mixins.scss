@@ -20,4 +20,6 @@
 @mixin border{
   border:solid $width-border $grey;
 }
-
+@mixin border-dotted{
+  border-bottom: dotted 2px $grey;
+}

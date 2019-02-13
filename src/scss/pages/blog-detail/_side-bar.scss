@@ -1,0 +1,55 @@
+.side-bar {
+  &__item {
+    margin-bottom: 20px;
+    &__header {
+      @include underline;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      @include font(16px, bold, black, null) {
+        text-transform: uppercase
+      }
+    }
+    &__body {
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+    }
+
+    &:nth-child(1){
+        .blog-new{
+          margin-bottom: 40px;
+          &__img{
+            float: left;
+            margin-right: 10px;
+          }
+          &__time{
+            font-size:25px;
+            font-weight: 700;
+
+            span{
+              font-size: 13px;
+              font-weight: 700;
+            }
+          }
+          &__author{
+            @include  font(14px,500,$grey,italic);
+          }
+        }
+    }
+    &:nth-child(2){
+      button {
+        @include border;
+        background: transparent;
+        padding: 3px 5px;
+        margin: 5px 3px;
+        &:nth-child(1){
+          background: $green;
+          color:white;
+        }
+      }
+    }
+    .side-bar__item__body{
+      display: inline;
+    }
+  }
+}

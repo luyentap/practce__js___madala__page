@@ -14,21 +14,49 @@ head
             | andala
         ul.header__primary
             li
-                a(href="#") TRANG CHỦ
+                a(href="index.html") TRANG CHỦ
             li
-                a(href="#") GIỚI THIỆU
+                a(href="about-us.html") GIỚI THIỆU
+            li.header__primary__product
+                a(href="list.html") SẢN PHẨM
+                //before: mui ten border, after dau tro xuong khi hvoer
+                .menu-product
+                    mixin item
+                        .menu-product__item
+                            h6.menu-product__item__title DƯỠNG DA
+                            .menu-product__item__list
+                                - var array_tagp =  ["Áo khoác","Bộ áo liền quần","Dress","Quần/Váy","Quần sort","Quần jean","Đồ đan","Áo nỉ"]
+                                each value in array_tagp
+                                    p= value
+                                p.menu-product__item__list--active Áo sơ mi
+                    - for(var i = 0; i < 3; i++)
+                        +item
             li
-                a(href="#") SẢN PHẨM
+                a(href="blog.html") TIN TỨC
             li
-                a(href="#") TIN TỨC
+                a(href="contact.html") BẢN ĐỒ
             li
-                a(href="#") BẢN ĐỒ
-            li
-                a(href="#") LIÊN HỆ
+                a(href="register.html") ĐĂNG KÝ
         .header__right
             button
                 a
                     i.fa.fa-shopping-cart
+                .cart
+                    .list__item
+                        mixin item
+                            .cart__item
+                                img.cart__item__img(src="../img/home/cart-item.jpg")
+                                .cart__item__description
+                                    p.cart__item__description__name Áo sơ mi nam
+                                    p.cart__item__description__price 120.000
+                                        sup đ
+                                a x
+                        +item
+                        +item
+                    p.cart__sum-price Tổng số
+                        span 240.000
+                            sup đ
+                    a.cart__button(src="shopping-cart.html") GIỎ HÀNG
             button
                 a
                     i.fa.fa-search

@@ -1,0 +1,54 @@
+.blog-content {
+  &__img {
+    width: 100%;
+    object-fit: cover;
+
+    margin-bottom: 40px;
+  }
+  &__text {
+    &__title {
+      @include underline;
+      font-size: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+    &__body {
+      p:nth-child(1){
+        font-weight: 400;
+      }
+      p:nth-child(2){
+        @include underline;
+        @include  font(16px,500,$grey,italic);
+        padding-bottom: 15px;
+        margin: 20px 0;
+      }
+    }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      color: $grey;
+    }
+  }
+  &__tag{
+    @include underline;
+    padding-top:40px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    span{
+      color: $grey;
+    }
+  }
+  .form{
+    padding: 0;
+    &-element{
+      display: grid;
+      grid-template-columns: 1fr 10fr;
+
+    }
+    button{
+      white-space: nowrap;
+    }
+  }
+}

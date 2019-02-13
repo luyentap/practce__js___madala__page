@@ -1,0 +1,27 @@
+.about-us{
+  &__title{
+    font-weight: 500;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    &__left{
+      object-fit: cover;
+      margin-right: 20px;
+    }
+    &__right{
+      .header-logo{
+        margin-bottom: 20px;
+      }
+      &__title{
+        font-weight: 400;
+      }
+      &__text{
+        font-weight: 400;
+      }
+      &__more{
+        color:$grey;
+      }
+    }
+  }
+}
