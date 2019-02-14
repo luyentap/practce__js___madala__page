@@ -1,7 +1,7 @@
 .detail-product {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 40px 0;
+  margin: 40px 0 70px 0;
   @media screen and (min-width: $screen-pc) {
     grid-template-columns: 1fr 1fr;
 
@@ -39,8 +39,8 @@
     display: grid;
     grid-gap: 10px;
     &__name {
-      @include font(25px, bold, black, null) {
-        text-transform: uppercase
+      @include font(22px, 400, black, null) {
+        text-transform: uppercase;
       }
     ;
       opacity: 0.8;
@@ -59,11 +59,13 @@
     }
     &__text {
       font-size: 14px;
+      font-weight: 400;
     }
     &__form {
       label {
         @extend .detail-description__name;
-        font-size: 18px;
+        font-size: 15px;
+        font-weight: 700;
         display: block;
         margin-bottom: 10px;
       }
@@ -72,7 +74,7 @@
         width: 80%;
         margin-bottom: 10px;
 
-        @include font(16px, normal, black, null);
+        @include font(14px, normal, black, null);
         opacity: 0.8;
       }
       .product__detail__button {
@@ -82,7 +84,7 @@
           padding: 10px 20px;
           margin: 10px 2px;
           border-radius: 15px;
-          border: solid $width-border $grey;
+          @include border;
           font-weight: bold;
           font-weight: bold;
 
@@ -106,6 +108,7 @@
       justify-content: space-evenly;
       flex-wrap: wrap;
       height: 25px;
+      font-size: 12px;
       //shipping and return
       p:first-child {
         @include font(12px, null, $grey, null);
@@ -115,6 +118,8 @@
       }
       //button social
       button{
+        height: 20px;
+        font-size: 12px;
         border: solid $width-border transparent;
         border-radius: 4px;
         font-weight: bold;

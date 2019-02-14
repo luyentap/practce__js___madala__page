@@ -16,7 +16,7 @@
 
 .description-product {
   .description-head {
-    @include font(18px, bold, black, null);
+    @include font(16px, 700, black, null);
     text-transform: uppercase;
     display: flex;
     @include underline;
@@ -26,7 +26,7 @@
       margin-right: 5%;
       opacity: 0.6;
     }
-    p:nth-child(1) {
+    p:first-child {
       opacity: 1;
     }
   }
@@ -47,7 +47,7 @@
     }
 
     &__title {
-      @include font(15px, 400, black, null);
+      @include font(14px, 400, black, null);
       margin-bottom: 15px;
 
       span {
@@ -56,9 +56,10 @@
       }
     }
     &__text {
-      @include font(14px, 400, $grey, null);
+      @include font(13px, 400, black, null);
       text-align: left;
       width: 80%;
+      opacity: 0.8;
     }
     &__img {
       height: 20%;
@@ -86,19 +87,37 @@
       @include underline;
       padding-bottom: 8px;
       margin-bottom: 8px;
+      @include font(16px, 700, black, null);
+      text-transform: uppercase;
 
     }
     &__item {
+      display: flex;
+      margin-top: 10px;
+      padding-bottom: 20px;
+      &:nth-child(2),&:nth-child(3){
+        @include border-dotted;
+      }
       &__img {
-
+        object-fit: cover;
+        margin-right: 12px;
       }
       &__description {
+        font-size: 14px;
+        white-space: nowrap;
         p:nth-child(1) {
-          font-weight: bold;
+          margin-bottom: 8px;
+          font-weight: 500;
         }
         p:nth-child(2) {
+          margin-bottom: 8px;
+          i{
+            padding-right: 4px;
+          }
           span {
-            font-weight: 300;
+            padding-left: 10px;
+            font-weight: 400;
+            opacity: 0.8;
           }
         }
         p:nth-child(3) {

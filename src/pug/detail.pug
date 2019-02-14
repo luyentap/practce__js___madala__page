@@ -21,7 +21,7 @@ include modules/header
             h5.detail-description__name Lắc tay TyFFanny xu hướng mới nhất
             p.detail-description__code Tyffancy ms 3201
             p.detail-description__price 955.000đ
-                span.detail-description__price-old 999.000đ
+                span.detail-description__price-old  999.000đ
             p.detail-description__text
                 | Không thể phủ nhận, thời trang và phong cách chính là “tuyên ngôn” không lời mạnh mẽ nhất của mỗi người phụ nữ. Do đó, việc mua sắm thời trang trở thành niềm vui, và có khi là nguồn cảm hứng vô tận để phái đẹp sống vui, sống đẹp hơn trong mắt nửa còn lại của thế giới. Để F5 tủ đồ của mình trước những xu hướng ngày một đa dạng hơn trong thế giới thời trang, nhiều chị em không ngần ngại chi tiêu “mạnh tay” để sở hữu những
                 | món đồ yêu thích.
@@ -75,9 +75,9 @@ include modules/header
     .more-detail
         .description-product
             .description-head
-                p Đặc điểm nổi bật
+                p.description-head--seleted Đặc điểm nổi bật
                 p Thông tin sản phẩm
-                p Đánh gía
+                p Đánh giá
 
             .description-body
                 .item
@@ -86,7 +86,7 @@ include modules/header
                             span THE MARK
                             | OF A LEGEND
                         p.description-body__text
-                            |Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                            | Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
                     img.description-body__img(src="../img/detail/Layer 88.jpg")
                 .item
                     img.description-body__img(src="../img/detail/Layer 87.jpg")
@@ -95,14 +95,14 @@ include modules/header
                             span THE MARK
                             | OF A LEGEND
                         p.description-body__text
-                            |Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                            | Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
                 .item
                     div
                         p.description-body__title
                             span THE MARK
                             | OF A LEGEND
                         p.description-body__text
-                            |Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                            | Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
                     img.description-body__img(src="../img/detail/Layer 85 copy.jpg")
                 .item
                     img.description-body__img(src="../img/detail/Layer 86.jpg")
@@ -112,7 +112,7 @@ include modules/header
                             span THE MARK
                             | OF A LEGEND
                         p.description-body__text
-                            |Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                            | Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
 
         .sibar-detail
             //product__best__seller
@@ -124,13 +124,12 @@ include modules/header
                         .product-best__item__description
                             p Mỹ phẩm châu âu
                             p
-                                each val in [1, 2, 3, 4]
+                                each val in [1, 2, 3, 4, 5]
                                     i.fa.fa-heart
                                 span (4 lượt mua)
                             p 35.000đ
-                +item
-                +item
-                +item
+                - for(var i = 0; i < 3; i++)
+                    +item
             //best buy
             .product-best
                 h3.product-best__header Sản phẩm Mua Nhiều
@@ -141,12 +140,11 @@ include modules/header
                         .product-best__item__description
                             p Mỹ phẩm châu âu
                             p
-                                each val in [1, 2, 3, 4]
+                                each val in [1, 2, 3, 4, 5]
                                     i.fa.fa-heart
                                 span (4 lượt mua)
                             p 35.000đ
-                +item
-                +item
-                +item
+                - for(var i = 0; i < 3; i++)
+                    +item
 
 include modules/footer
