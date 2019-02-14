@@ -1,0 +1,19 @@
+.register{
+  &__title{
+    font-weight: 400;
+  }
+
+  .form{
+    background: $grey;
+    &:nth-child(3){
+      padding-top: 0;
+      .form-element{
+        &__button{
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

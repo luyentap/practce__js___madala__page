@@ -1,0 +1,34 @@
+.contact{
+  &__title{
+    font-weight: 500;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-evenly;
+    &__left{
+      object-fit: cover;
+      margin-right: 20px;
+    }
+    &__right {
+
+    }
+  }
+}
+.form{
+  background: white;
+  &__title{
+    margin-bottom: 20px;
+  }
+  &-element{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-bottom: 30px;
+
+    input,textarea{
+       @include border;
+    }
+    textarea{
+      height: 100px;
+    }
+  }
+}
