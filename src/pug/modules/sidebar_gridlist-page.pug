@@ -1,0 +1,34 @@
+.sidebar-grid
+    .sidebar-grid__item
+        h3.sidebar-grid__item__header
+            i.fa.fa-bars
+            | Danh mục sản phẩm
+        .sidebar-grid__item__body
+            .list
+                ul
+                    li Mỹ phẩm
+                i.fa.fa-caret-down
+            .list
+                ul
+                    - var array_li = ["Trang sức","Vòng tay","Nhẫn","Lắc chân","Phụ kiện khác","Giày"]
+                    each value in array_li
+                        li= value
+                i.fa.fa-caret-down
+            .list
+                ul
+                    li Phụ kiện
+                i.fa.fa-caret-down
+            .list
+                ul
+                    li Nước hoa
+                i.fa.fa-caret-down
+    .sidebar-grid__item
+        h3.sidebar-grid__item__header So sánh sản phẩm
+
+        .sidebar-grid__item__body
+            p Bạn chưa có sản phẩm nào
+    .sidebar-grid__item
+        h3.sidebar-grid__item__header Tag sản phẩm
+        .sidebar-grid__item__body
+            include array-button_sidebar
+    img.sidebar-grid__banner(src="../img/grid/04_Gird_03.jpg")

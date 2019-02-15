@@ -137,7 +137,7 @@
       position: absolute;
       //top:60px;
       left: -50%;
-      padding: 20px;
+      padding: 0 20px;
       border: solid 2px #78973c;
       background: white;
       .list__item {
@@ -153,28 +153,32 @@
           &__name {
             font-size: 12px;
             font-weight: 500;
+            padding-right: 20px;
           }
           &__price {
             @include font(14px, 600, $green, normal);
             font-family: Charm;
+            padding-right: 20px;
           }
         }
 
       }
       &__sum-price {
+        text-align: left;
         padding: 20px 0;
+        font-weight: 600;
         span {
           float: right;
           color: green;
           font-family: Charm;
-          font-weight: 500;
+          font-weight: 700;
         }
       }
       &__button {
+        float: left;
         background: black;
         color: white;
         padding: 4px 10px;
-
       }
     }
     .cart:before {
