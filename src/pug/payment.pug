@@ -1,0 +1,37 @@
+include modules/header
+
+.container
+    .link-intro
+        a Home >
+        a Cart >
+        a.cl-green Thông tin thanh toán >
+
+.container
+    .register
+        form.form
+            h3.form__title THÔNG TIN CÁ NHÂN
+            .form-element
+                label Họ và Tên
+                    span.upper-text *
+                input.form-element__name
+            .form-element
+                label Địa chỉ
+                    span.upper-text *
+                input.form-element__address
+            .form-element
+                label Điện thoại
+                    span.upper-text *
+                input.form-element__phone
+            h3.form__title THÔNG TIN THÊM
+            .form-element
+                label.form-element__email Email
+                    span.upper-text *
+                input
+
+            .form-element.form-element__button
+                button(onclick="location.href='payment-sucess.html'" type="button") Gửi
+                button(onclick="location.href='shopping-cart.html'" type="button")
+                    i.fa.fa-undo
+                    |Quay lại
+
+include modules/footer

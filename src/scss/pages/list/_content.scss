@@ -38,6 +38,7 @@
         object-fit: cover;
         padding-bottom: 2px;
         @include border-dotted;
+        margin-right: 20px;
       }
       &__detail {
         font-weight: bold;

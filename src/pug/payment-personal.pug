@@ -1,0 +1,69 @@
+include modules/header
+
+.container
+    .link-intro
+        a Home >
+        a Cart >
+        a.cl-green Thông tin thanh toán >
+.container
+    .step-payment
+        .step-payment__item.bg-yellow
+            .step-payment__item__step
+                | Bước 1:
+            .step-payment__item__content
+                | Kiểm tra giỏ hàng
+        .step-payment__item.bg-yellow
+            .step-payment__item__step
+                | Bước 2:
+            .step-payment__item__content
+                | Thông tin thanh toán
+        .step-payment__item
+            .step-payment__item__step
+                | Bước 3:
+            .step-payment__item__content
+                | Thông báo kết quả
+
+.container
+    .register
+        form.form
+            h3.form__title THÔNG TIN CÁ NHÂN
+            .form-element
+                label Họ và Tên
+                    span.upper-text *
+                input.form-element__name(required="true")
+            .form-element
+                label Địa chỉ
+                    span.upper-text *
+                input.form-element__address(required="true")
+            .form-element
+                label Điện thoại
+                    span.upper-text *
+                input(type="tel" required="true").form-element__phone
+            .form-element
+                label Email
+                    span.upper-text *
+                input(type="email" required="true").form-element__email
+            h3.form__title THÔNG TIN THÊM
+                .form-element(style="font-size:30px")
+                    i.fa.fa-cc-visa(style="color:navy;margin-right:12px")
+                    i.fa.fa-cc-amex(style="color:blue;;margin-right:12px")
+                    i.fa.fa-cc-mastercard(style="color:red;;margin-right:12px")
+                    i.fa.fa-cc-discover(style="color:orange;")
+                .form-element
+                    label Tên chủ thẻ
+                        span.upper-text *
+                    input(type="tel" placeholder="Nguyen Van A" required="true").form-element__card-name
+                .form-element
+                    label Số thẻ
+                        span.upper-text *
+                    input(type="email" placeholder="111 222 333 444" required="true").form-element__card-number
+
+            .form-element.form-element__button
+                button(onclick="location.href='payment-personal_checkout.html'; addPayment();" type="button") Gửi
+                button(onclick="location.href='payment_checkoutcart.html'" type="button")
+                    i.fa.fa-undo
+                    |Quay lại
+
+include modules/footer
+
+script(type="application/javascript" src="../js/payment.js")

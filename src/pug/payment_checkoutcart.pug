@@ -1,0 +1,30 @@
+include modules/header
+
+.container
+    .link-intro
+        a Home >
+        a Thanh Toán >
+        a.cl-green Checkout
+
+.container
+    include modules/step_payment_cart
+    .shopping-cart
+        table.table
+            thead
+                th Ảnh
+                th Tên sản phẩm
+                th Giá
+                th Số lượng
+                th Tổng số
+            tbody.shopping-cart__table__body
+
+        p.sum-price(style="text-align:right")
+            |Tổng tiền
+            span.sum-price__number
+                | 0 vnđ
+        .shopping-cart__button(style="clear:both")
+            button(onclick="location.href='payment-personal.html'" type="button") Tiếp tục mua hàng
+
+include modules/footer
+
+script(type="application/javascript" src="../js/payment-checkoutcart.js")

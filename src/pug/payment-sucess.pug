@@ -1,0 +1,31 @@
+//clear before render
+script(type="application/javascript" src="../js/clear-store.js")
+
+include modules/header
+
+.container(style="padding-top:40px")
+    .step-payment
+        .step-payment__item.bg-yellow
+            .step-payment__item__step
+                | Bước 1:
+            .step-payment__item__content
+                | Kiểm tra giỏ hàng
+        .step-payment__item.bg-yellow
+            .step-payment__item__step
+                | Bước 2:
+            .step-payment__item__content
+                | Thông tin thanh toán
+        .step-payment__item.bg-yellow
+            .step-payment__item__step
+                | Bước 3:
+            .step-payment__item__content
+                | Thông báo kết quả
+
+.container
+    h1(style="font-weight:600") Chúc mừng bạn đã hoàn thành việc đặt hàng
+    a(href="index.html")
+        i.fa.fa-undo
+        | Quay lại
+
+include modules/footer
+

@@ -11,6 +11,20 @@
 
       }
     }
+    $width_td : ("15%","35%","15%","15%","15%","5%");
+    @for $i from 1 through length($width_td) {
+      td:nth-child(#{$i}) {
+        width: unquote(nth($width_td,$i));
+      }
+    }
+    img{
+      object-fit: cover;
+      width: 100%;
+    }
+    input{
+      width: 20%;
+      text-align: center;
+    }
   }
 
   &__button{
